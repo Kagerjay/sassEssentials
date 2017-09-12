@@ -8,9 +8,18 @@ $color-media-head: $blue;
 
   //subrules
   .item {
-    margin-bottom: 20px;
-    border-top: 1px dotted $color-item-border;
+    padding-bottom: 20px;
     padding-top: 10px;
+    padding-left: 10px;
+    border-top: 1px dotted $color-item-border;
+    //pseudoclass
+    &:hover {
+      background: $yellow;
+    }
+    &:last-of-type {
+      border-bottom: 1px dotted $color-item-border;
+    }
+    @include clearfix;
   }
 
   .head {
@@ -18,6 +27,9 @@ $color-media-head: $blue;
     padding: 0;
     color: $color-media-head;
     font-size: 2rem;
+    #typography & {
+      color: $red;
+    }
   }
 
   p {
