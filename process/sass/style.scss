@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Josefin+Slab|Merriweather|Roboto:400,700');
-@import "variables.scss";
-@import "normalize.scss";
-@import "base.scss";
-@import "modules/media.scss";
+@import "variables";
+@import "normalize";
+@import "mixins";
+@import "base";
+
+@import "modules/backgrounds";
+@import "modules/media";
