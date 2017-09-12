@@ -4,12 +4,14 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     webserver = require('gulp-webserver');
 
+//Linting and Reporting tools
 gulp.task('js', function() {
   return gulp.src('builds/sassEssentials/js/myscript.js')
     .pipe(jshint('./.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
+//Compresses SASS into finished CSS
 gulp.task('sass', function () {
     return sass('process/sass/style.scss', {
       sourcemap: true,
@@ -22,11 +24,13 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('builds/sassEssentials/css'));
 });
 
+//Watch file and execute changes
 gulp.task('watch', function() {
   gulp.watch('builds/sassEssentials/js/**/*', ['js']);
   gulp.watch(['process/sass/**/*'], ['sass']);
 });
 
+//Live reload server
 gulp.task('webserver', function() {
     gulp.src('builds/sassEssentials/')
         .pipe(webserver({
