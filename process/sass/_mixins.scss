@@ -41,6 +41,6 @@
 //For navigation section
 @mixin break($length) {
   @media(min-width: $length) {
-    @content;
+    @content; //@content is a placeholder for CSS passed to it
   }
 }

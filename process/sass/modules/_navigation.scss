@@ -28,6 +28,7 @@ nav {
 	}
 
 	ul li {
+    //above 760 px, apply floatright so nav is all ontop
     @include break(760px){
       float: right;
     }
