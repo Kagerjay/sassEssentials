@@ -23,6 +23,7 @@
   }
 }
 
+//we have clearfix, this mixin modifies image size
 @mixin imagegrid($qty, $margin) {
   width: ((100%-(($qty - 1) * $margin)) / $qty);
   //Put margin on each image
