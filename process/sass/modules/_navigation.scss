@@ -3,8 +3,14 @@ nav {
 		background-color: darken($blue, 15%);
 	}
 
+  //Its the "Table of Contents" nav part
 	.branding {
 		float: left;
+    display: none;
+    //Apply media query from mixin, whihc shows "Table of Contents" when above 1000px
+    @include break(1000px){
+      display: block;
+    }
 	}
 
 	.branding h1 {
@@ -22,7 +28,9 @@ nav {
 	}
 
 	ul li {
-		float: right;
+    @include break(760px){
+      float: right;
+    }
 		padding: 10px 5px;
 	}
 
@@ -48,8 +56,4 @@ nav {
 		min-height: 200px;
 		background-color: darken($blue, 15%);
 	}
-}
-
-@mixin break($length) {
-  @media(min-width: $length) {}
 }

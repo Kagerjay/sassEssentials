@@ -37,3 +37,10 @@
     margin-bottom: 0;
   }
 }
+
+//For navigation section
+@mixin break($length) {
+  @media(min-width: $length) {
+    @content;
+  }
+}
