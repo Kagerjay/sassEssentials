@@ -2,6 +2,7 @@ $color-btn-text: $color-backgrounds;
 $color-btn-default: $color-main;
 $color-btn-hot: $red;
 $color-btn-cool: $blue;
+$roundness: 20px 0px 20px 0px;
 
 %btn {
 	display: inline-block;
@@ -40,7 +41,7 @@ $color-btn-cool: $blue;
   }
   img {
     display: block;
-    border-radius: 10px;
+    border-radius: nth($roundness,1); //grabs first value from "20px 0px 20px 0px", which is 20px. (INDEX 1)
     max-width: 100%;
   }
 }
