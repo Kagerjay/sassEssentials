@@ -27,6 +27,8 @@ $color-media-head: $blue;
     padding: 0;
     color: $color-media-head;
     font-size: 2rem;
+    //If there's a parent ID of typography on this class head element, set color to red
+    //contextual class = #
     #typography & {
       color: $red;
     }
