@@ -22,3 +22,17 @@
     clear: both;
   }
 }
+
+@mixin imagegrid($qty, $margin) {
+  width: ((100%-(($qty - 1) * $margin)) / $qty);
+  //Put margin on each image
+  &:nth-child(n) {
+    margin-right: $margin;
+    margin-bottom: $margin;
+  }
+  //last element in group
+  &:nth-child(#{$qty}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
