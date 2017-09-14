@@ -39,8 +39,25 @@
 }
 
 //For navigation section
+/*
 @mixin break($length) {
   @media(min-width: $length) {
     @content; //@content is a placeholder for CSS passed to it
+  }
+}
+*/
+
+//For any number of arguments
+@mixin break($args...) {
+  @if length($args) == 1 {
+    @media (min-width: nth($args, 1)){
+      @content;
+    }
+    //else we create a CSS media query with content passed it, at min and max width
+  } @else {
+    @media (min-width: nth($args, 1))
+      and (max-width: nth($args, 2)){
+      @content;
+    }
   }
 }
